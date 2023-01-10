@@ -1,0 +1,12 @@
+     1                                  ;activity 1
+     2                                  
+     3                                  [org 0x0100]
+     4 00000000 A0[1900]                mov al, [num1] ;load num 1 in ax
+     5 00000003 A3[1F00]                mov [num1+6], ax ;write data from ax in number 4
+     6 00000006 A1[1A00]                mov ax, [num1+1] ;load num 2 in ax
+     7 00000009 0006[1E00]              add [num1+5], al ;add 2 numbers
+     8 0000000D A1[1D00]                mov ax, [num1+4] ;load num 3 in ax
+     9 00000010 0026[1F00]              add [num1+6], ah ;add 2 numbers
+    10 00000014 B8004C                  mov ax, 0x4c00 ;terminate the program
+    11 00000017 CD21                    int 0x21
+    12 00000019 CDAB34129A270000        num1: dw 0xabcd, 0x1234, 0x279A, 0

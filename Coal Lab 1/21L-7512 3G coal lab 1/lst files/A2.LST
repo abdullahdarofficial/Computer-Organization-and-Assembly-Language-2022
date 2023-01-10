@@ -1,0 +1,35 @@
+     1                                  ;Activity 2: Write a program that copies data from one array data1 to another array data2. 
+     2                                  ;Initially data1 will have 2,4,6,8,10 and data2 will have all zeros in it.
+     3                                  
+     4                                  [org 0x0100]
+     5                                  
+     6 00000000 A1[2300]                mov ax,[data1] ; ax=data1
+     7 00000003 A3[2D00]                mov [data2],ax ; data2=ax
+     8                                  
+     9                                  
+    10 00000006 A1[2500]                mov ax,[data1+2] ; ax=data1+2
+    11 00000009 A3[2F00]                mov [data2+2],ax ; data2+2=ax
+    12                                  
+    13                                  
+    14 0000000C A1[2700]                mov ax,[data1+4] ; ax=data1+4
+    15 0000000F A3[3100]                mov [data2+4],ax ; data2+4=ax
+    16                                  
+    17                                  
+    18 00000012 A1[2900]                mov ax,[data1+6] ; ax=data1+6
+    19 00000015 A3[3300]                mov [data2+6],ax ; data2=ax+6
+    20                                  
+    21                                  
+    22 00000018 A1[2B00]                mov ax,[data1+8] ; ax=data1+8
+    23 0000001B A3[3500]                mov [data2+8],ax ; data2+8=ax
+    24                                  
+    25                                  
+    26 0000001E B8004C                  mov ax, 0x4c00	;terminate the program
+    27 00000021 CD21                    int 0x21
+    28                                  
+    29 00000023 02000400060008000A-     data1: dw 2,4,6,8,10
+    30 0000002C 00                 
+    31 0000002D 000000000000000000-     data2: dw 0,0,0,0,0
+    32 00000036 00                 
+    33                                  
+    34                                  
+    35                                  

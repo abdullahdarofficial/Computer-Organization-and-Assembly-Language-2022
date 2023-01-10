@@ -1,0 +1,25 @@
+     1                                  ;Write a program that rotates the value of three registers clockwise twice i.e. given these
+     2                                  ;initial values: ax=10, bx=20, cx=30.
+     3                                  
+     4                                  [org 0x0100] ;we will see org directive later
+     5                                  
+     6 00000000 B80A00                  mov ax,10
+     7 00000003 BB1400                  mov bx,20
+     8 00000006 B91E00                  mov cx,30
+     9                                  
+    10                                  
+    11 00000009 89CA                    mov dx,cx
+    12 0000000B 89D9                    mov cx,bx
+    13 0000000D 89C3                    mov bx,ax
+    14 0000000F 89D0                    mov ax,dx
+    15 00000011 BA0000                  mov dx,0
+    16                                  
+    17                                  
+    18 00000014 89CA                    mov dx,cx
+    19 00000016 89D9                    mov cx,bx
+    20 00000018 89C3                    mov bx,ax
+    21 0000001A 89D0                    mov ax,dx
+    22 0000001C BA0000                  mov dx,0
+    23                                  
+    24 0000001F B8004C                  mov ax, 0x4c00 ;terminate the program
+    25 00000022 CD21                    int 0x21

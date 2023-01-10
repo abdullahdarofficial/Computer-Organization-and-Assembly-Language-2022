@@ -1,0 +1,14 @@
+     1                                  ;Write a program in assembly language that calculates the square of six by adding six to the
+     2                                  ;accumulator six times.
+     3                                  
+     4                                  [org 0x0100] ;we will see org directive later
+     5                                  
+     6 00000000 B80600                  mov ax,6 ; ax=6
+     7 00000003 050600                  add ax,6 ; ax=ax+6
+     8 00000006 050600                  add ax,6 ; ax=ax+6
+     9 00000009 050600                  add ax,6 ; ax=ax+6
+    10 0000000C 050600                  add ax,6 ; ax=ax+6
+    11 0000000F 050600                  add ax,6 ; ax=ax+6
+    12                                  
+    13 00000012 B8004C                  mov ax, 0x4c00 ;terminate the program
+    14 00000015 CD21                    int 0x21

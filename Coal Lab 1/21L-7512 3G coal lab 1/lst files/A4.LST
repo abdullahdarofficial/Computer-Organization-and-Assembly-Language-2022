@@ -1,0 +1,13 @@
+     1                                  ;Modify this program to generate the sum of first five entries of table of 3, using registers,
+     2                                  ;and watch its execution in the debugger.
+     3                                  
+     4                                  [org 0x0100] ;we will see org directive later
+     5                                  
+     6 00000000 B80300                  mov ax, 3
+     7 00000003 050300                  add ax, 3
+     8 00000006 050300                  add ax, 3
+     9 00000009 050300                  add ax, 3
+    10 0000000C 050300                  add ax, 3
+    11                                  
+    12 0000000F B8004C                  mov ax, 0x4c00 ;terminate the program
+    13 00000012 CD21                    int 0x21
