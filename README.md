@@ -1,1 +1,1 @@
-# Computer-Organization-and-Assembly-Language-2022
+🖥️ **Computer Organization & Assembly Language (2022)** – A comprehensive repository containing course materials, labs, midterm resources, and notes for Computer Organization and Assembly Language. Includes lecture notes, textbook references, and practical exercises to understand low-level programming and system architecture. Ideal for students and enthusiasts! ⚡
